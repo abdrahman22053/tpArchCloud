@@ -3,8 +3,6 @@ phases:
   install:
     runtime-versions:
       java: corretto8
-    commands:
-      - yum install -y maven
   build:
     commands:
       - mvn clean install
