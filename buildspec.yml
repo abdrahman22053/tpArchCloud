@@ -7,14 +7,11 @@ phases:
     commands:
       - mvn clean install
       - mvn package
-      - mkdir output
-      - cp target/*.war output/
 
 artifacts:
   files:
-    - output/*.war
+    - target/*.war
     - appspec.yml
-    - scripts/*
     - install_dependencies.sh
     - start_server.sh
     - stop_server.sh

@@ -2,19 +2,21 @@ version: 0.0
 os: linux
 
 files:
-  - source: /output/lab2-webapp.war
-    destination: /usr/share/tomcat10/webapps
+  - source: target/lab2-webapp.war
+    destination: /var/lib/tomcat10/webapps/
 
 hooks:
+  ApplicationStop:
+    - location: stop_server.sh
+      timeout: 300
+      runas: root
+
   BeforeInstall:
     - location: install_dependencies.sh
       timeout: 300
       runas: root
-    - location: start_server.sh
-      timeout: 300
-      runas: root
 
-  ApplicationStop:
-    - location: stop_server.sh
+  ApplicationStart:
+    - location: start_server.sh
       timeout: 300
       runas: root
