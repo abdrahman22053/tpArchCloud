@@ -5,12 +5,13 @@ phases:
       java: corretto8
   build:
     commands:
-      - mvn clean install
-      - mvn package
+      - mvn clean package
+      - mkdir output
+      - cp target/lab2-webapp.war output/
 
 artifacts:
   files:
-    - target/*.war
+    - output/lab2-webapp.war
     - appspec.yml
     - install_dependencies.sh
     - start_server.sh
