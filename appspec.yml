@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: target/lab2-webapp.war
+  - source: output/lab2-webapp.war
     destination: /var/lib/tomcat10/webapps/
 
 hooks:
