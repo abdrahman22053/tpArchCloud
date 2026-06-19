@@ -1,2 +1,3 @@
 #!/bin/bash
-yum install tomcat10 -y
+
+sudo dnf install -y tomcat10

@@ -1,2 +1,2 @@
 #!/bin/bash
-service tomcat10 stop
+sudo systemctl stop tomcat10

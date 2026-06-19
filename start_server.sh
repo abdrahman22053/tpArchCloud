@@ -1,2 +1,2 @@
 #!/bin/bash
-service tomcat10 start
+sudo systemctl start tomcat10
